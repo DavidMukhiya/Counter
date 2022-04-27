@@ -4,7 +4,6 @@ import Counter from './component/counter/Counter';
 function App() {
   return (
     <div className="App">
-      My Hello World
       <Counter />
     </div>
   );
