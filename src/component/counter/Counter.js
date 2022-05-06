@@ -1,6 +1,18 @@
 import React, { Component } from 'react'
 import './Counter.css'
+
 class Counter extends Component {
+    render() {
+        return (
+            <div>
+                <CounterButton />
+                <CounterButton by={5} />
+                <CounterButton by={10} />
+            </div>
+        )
+    }
+}
+class CounterButton extends Component {
 
     constructor() {
         super();
@@ -26,7 +38,11 @@ class Counter extends Component {
             counter: this.state.counter + this.props.by
         })
     }
+
 }
 
+CounterButton.defaultProps = {
+    by: 1
+}
 
 export default Counter;
